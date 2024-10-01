@@ -7,8 +7,14 @@ on:
         default: Hello
         required: true
         description: A cheerful word
+      level:
+        type: choice
+        options:
+          - "!"
+          - "!!"
+        description: choice value
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ inputs.greeting }}"
+      - run: echo "${{ inputs.greeting }}{{ inputs.level }}"
