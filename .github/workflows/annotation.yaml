@@ -1,9 +1,0 @@
-name: Annotation
-on: push
-jobs:
-  log:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "::error::This is error massage"
-      - run: echo "::warning::This is warning massage"
-      - run: echo "::notice::This is notice massage"
